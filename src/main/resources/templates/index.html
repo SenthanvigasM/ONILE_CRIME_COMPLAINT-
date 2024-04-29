@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Details Tracker</title>
+    <style>
+        /* Add your CSS styles here */
+        form {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Crime Details Tracker</h2>
+    <form method="post" action="/submitCrime">
+        <label for="crimeName">Crime Name:</label><br>
+        <input type="text" id="crimeName" name="crimeName"><br><br>
+        
+        <label for="crimeType">Crime Type:</label><br>
+        <select id="crimeType" name="crimeType">
+            <option value="Suicide">Suicide</option>
+            <option value="Homicide">Homicide</option>
+            <option value="Theft">Theft</option>
+        </select><br><br>
+        
+        <label for="crimeLocation">Crime Location:</label><br>
+        <input type="text" id="crimeLocation" name="crimeLocation"><br><br>
+        
+        <input type="submit" value="Submit Crime Details">
+    </form>
+</body>
+</html>
